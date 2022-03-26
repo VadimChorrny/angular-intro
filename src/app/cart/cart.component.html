@@ -1,0 +1,12 @@
+<div class="cart">
+    <h2>{{ title }}</h2>
+    <h3>{{ text }}</h3>
+    <p>{{ getInfo() }}</p>
+    <div>
+        <img [src]="imgUrl" />
+        <br>
+        <button [disabled]="disabled">Enable</button>
+        <button (click)="changeTitle()">Change Title</button>
+        <button (click)="title = 'Change title inline'">Change Title Inline</button>
+    </div>
+</div>

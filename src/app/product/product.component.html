@@ -1,0 +1,19 @@
+<h2>Product list</h2>
+
+<div *ngIf="!products" class="loading">
+    <img src="https://i0.wp.com/codemyui.com/wp-content/uploads/2019/01/Rotating-Pizza-Slice-Preloader.gif?fit=690%2C345&ssl=1"
+        alt="Loading">
+</div>
+
+<p *ngIf="products?.length === 0">There is no movies yet!</p>
+
+<div *ngFor="let product of products" [ngSwitch]="product.status" class="product-list">
+    <div class="product-block"><span>Title: </span>{{product.title}}</div>
+    <div class="product-block"><span>Description: </span>{{product.description}}</div>
+    <div class="product-block"><span>Price: </span>{{product.price}}</div>
+    <div class="product-block"><span>Rating: </span>{{product.rating}}</div>
+    <div class="product-block"><span>Created Date: </span>{{product.createdDate | date: 'shortTime'}}
+    </div>
+    <div class="product-block"><span>Amount: </span>{{product.amount}}</div>
+    <div class="product-block"><span>Status: </span>{{product.status}}</div>
+</div>
