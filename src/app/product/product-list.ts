@@ -21,7 +21,7 @@ export const productList: Product[] = [
         description: '10% fat content, for cooking',
         status: Status.Canceled,
         price: 56,
-        rating: 4.3,
+        rating: 2.3,
         createdDate: new Date('03/04/2022'),
         amount: 22,
     },
