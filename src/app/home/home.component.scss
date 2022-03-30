@@ -1,0 +1,17 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-container p{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.home-container img{
+    margin-top: 50px;
+    width: 600px;
+}

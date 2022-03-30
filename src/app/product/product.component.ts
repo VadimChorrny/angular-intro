@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
   activity: Status.Active;
 
   ngOnInit(): void {
-    //setTimeout(() => this.products = productList, 1500);
+    setTimeout(() => this.products = productList, 1500);
   }
 
   removeProduct(index: number): void {
