@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../product';
+import { productList } from '../product/product-list';
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => this.products = productList, 1500);
   }
 
   createProduct() {
@@ -28,6 +30,7 @@ export class AdminComponent implements OnInit {
     })
   }
 }
+
 enum Status {
   Active = "Active",
   Canceled = "Canceled",

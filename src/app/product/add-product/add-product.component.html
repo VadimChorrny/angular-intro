@@ -1,0 +1,24 @@
+<h2>Create New Product</h2>
+
+<form (submit)="submit()" [formGroup]="form">
+    <div class="input-blocks">
+        <mat-form-field appearance="fill">
+            <mat-label>Title:</mat-label>
+            <input formControlName="title" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Description:</mat-label>
+            <input formControlName="description" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Price:</mat-label>
+            <input formControlName="price" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Amount:</mat-label>
+            <input formControlName="amount" matInput>
+        </mat-form-field>
+    </div>
+    <button [disabled]="!form.valid" mat-raised-button type="submit" color="accent">Save</button>
+    <a routerLink="/products" mat-raised-button>Back</a>
+</form>
