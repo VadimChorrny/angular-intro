@@ -1,21 +1,24 @@
-<div *ngIf="!products" class="loading">
-    <img src="https://i0.wp.com/codemyui.com/wp-content/uploads/2019/01/Rotating-Pizza-Slice-Preloader.gif?fit=690%2C345&ssl=1"
-        alt="Loading">
-</div>
+<div class="product-component">
+    <div *ngIf="!products" class="loading">
+        <img src="https://i0.wp.com/codemyui.com/wp-content/uploads/2019/01/Rotating-Pizza-Slice-Preloader.gif?fit=690%2C345&ssl=1"
+            alt="Loading">
+    </div>
 
-<p *ngIf="products?.length === 0">There is no product yet!</p>
-<div class="product">
-    <div *ngFor="let product of products; let i = index;" [ngSwitch]="product.status" class="product-list"
-        (click)="removeProduct(i)" [ngClass]="{'great-product': product.rating <= 4}">
-        <div><span>Index: </span>{{i}}</div>
-        <div class="product-block"><span>Title: </span>{{product.title}}</div>
-        <div class="product-block"><span>Description: </span>{{product.description}}</div>
-        <div class="product-block"><span>Price: </span>{{product.price}}</div>
-        <div class="product-block"><span>Rating: </span>{{product.rating}}</div>
-        <div class="product-block"><span>Created Date: </span>{{product.createdDate | date: 'shortTime'}}
-        </div>
-        <div class="product-block"><span>Amount: </span>{{product.amount}}</div>
-        <div class="product-block"><span>Status: </span>{{product.status}}</div>
-        <button (click)="changeState(i)" mat-button color="accent">Change State</button>
+    <p *ngIf="products?.length === 0">There is no product yet!</p>
+    <div class="product">
+        <mat-card *ngFor="let product of products; let i = index;" [ngSwitch]="product.status" class="product-list"
+            [ngClass]="{'great-product': product.rating <= 4}">
+            <div><span>Index: </span>{{i}}</div>
+            <div class="product-block"><span>{{product.title}}</span></div>
+            <div class="product-block"><span>{{product.description}}</span></div>
+            <div class="product-block"><span>{{product.price}}</span></div>
+            <div class="product-block"><span>{{product.rating}}</span></div>
+            <div class="product-block"><span>{{product.createdDate | date: 'shortTime'}}</span></div>
+            <div class="product-block"><span>{{product.amount}}</span></div>
+            <div class="product-block"><span>{{product.status}}</span></div>
+            <button (click)="changeState(i)" mat-button color="accent">Change State</button>
+            <button [routerLink]="['/products/edit/', product.id]" mat-stroked-button>Edit</button>
+        </mat-card>
+
     </div>
 </div>

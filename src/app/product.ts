@@ -1,3 +1,4 @@
+
 enum Status {
     Active = "Active",
     Canceled = "Canceled",
@@ -5,6 +6,7 @@ enum Status {
 }
 
 export interface Product {
+    id: number,
     title: string;
     description: string;
     price: number;

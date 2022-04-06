@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     AdminComponent,
-    AddProductComponent
+    AddProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

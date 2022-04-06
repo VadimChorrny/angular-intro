@@ -8,6 +8,7 @@ enum Status {
 
 export const productList: Product[] = [
     {
+        id: 0,
         title: 'Milk',
         description: 'Eco milk, 0.5 liter',
         status: Status.Active,
@@ -17,6 +18,7 @@ export const productList: Product[] = [
         amount: 10,
     },
     {
+        id: 1,
         title: 'Butter',
         description: '10% fat content, for cooking',
         status: Status.Canceled,
@@ -26,6 +28,7 @@ export const productList: Product[] = [
         amount: 22,
     },
     {
+        id: 2,
         title: 'Water',
         description: 'Mineral water from Carpatian Mountain',
         status: Status.InProgress,
@@ -35,6 +38,7 @@ export const productList: Product[] = [
         amount: 110,
     },
     {
+        id: 3,
         title: 'Snaks',
         description: 'Snaks with meat and chease',
         status: Status.Active,
@@ -44,6 +48,7 @@ export const productList: Product[] = [
         amount: 24,
     },
     {
+        id: 4,
         title: 'Bread',
         description: 'Fresh and fragrant bread',
         status: Status.InProgress,

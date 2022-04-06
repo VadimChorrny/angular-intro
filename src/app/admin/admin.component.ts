@@ -19,15 +19,6 @@ export class AdminComponent implements OnInit {
   }
 
   createProduct() {
-    this.products.push({
-      title: 'Test data',
-      description: '10% fat content, for cooking',
-      status: Status.Canceled,
-      price: 56,
-      rating: 2.3,
-      createdDate: new Date('03/04/2022'),
-      amount: 22,
-    })
   }
 }
 
